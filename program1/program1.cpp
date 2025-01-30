@@ -24,7 +24,6 @@
 
 using namespace std;
 
-bool isOnlyNumbers(const string& str);
 
 int PORT = 50000;
 void readPortFromFile(const string& filename);
@@ -130,14 +129,6 @@ void thread2Function() {
     }
 }
 
-bool isOnlyNumbers(const string& str) {
-    for (char symbol : str) {
-        if (symbol < '0' || symbol > '9') {
-            return false;
-        }
-    }
-    return true;
-}
 
 void readPortFromFile(const string& filename) {
     ifstream file(filename);
